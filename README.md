@@ -77,20 +77,17 @@ n = 6q + r
 ```
 where q is a non-negative integer and the remainder r is one of 0, 1, 2, 3, 4, or 5.
 
-```
 <ul>
 <li>If the remainder is 0, 2 or 4, then the number n is divisible by 2, and can not be prime.</li>
 <li>If the remainder is 3, then the number n is divisible by 3, and can not be prime.</li>
 </ul>
-```
 
 So if n is prime, then the remainder r is either
-```
+
 <ul>
 <li>1   (and   n = 6q + 1   is one more than a multiple of six), or </li>
 <li>5   (and   n = 6q + 5 = 6(q+1) - 1   is one less than a multiple of six). </li>
 </ul>
-```
 
 2   3  4  5  6  7<br>
 8   9 10 11 12 13<br>
@@ -126,7 +123,7 @@ def isPrime(n):
         return True
     return False
 ```
-
+Here we are not iterating for every number , we are iterating only for number of form 6q + r , so number of iterations are being reduced.
 So coming back to the question .
 
 Can't we find weather a number is prime or not just by looking at it , i mean to say not by iterating all the numbers upto sqrt of n ??
@@ -143,9 +140,9 @@ Example :-
 Is 629 a prime number ?<br>
 629 = 6 x 105 - 1<br>
 It COULD be prime number.<br>
-√629 ≈ 25
-Try dividing 629 by 2,3,5,7,11,13,17,19 & 23
-629 is divisible by 17.
+√629 ≈ 25<br>
+Try dividing 629 by 2,3,5,7,11,13,17,19 & 23 <br>
+629 is divisible by 17.<br>
 Hence 629 is NOT prime.
 
 This could be achived by Sieve of Eratosthenes(SOE) method .
