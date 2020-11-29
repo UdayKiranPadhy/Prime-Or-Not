@@ -9,7 +9,7 @@ A prime number is a whole number greater than 1, which is only divisible by 1 an
 
 How we check whether a number is Prime or not? 
 
-Upto this level the problem of finding weather a given number is prime or not was just a whole problem or a huge part of a problem , but as the standards of competative programming increases it proposes a huge problem in the area of time complexity. I mean for example we want the sum of prime numbers upto 10000 suppose, then iterating from 1 to 10000 and checking each and every singlr number weather it is prime or not up to 10000, and even inside the prime we keep another For loop from 1 to some range so just imagine how much huge amount of calculations are being done , so it poses a problem .Same as you , I googled it out and spent some time in it , and found these.
+Upto this level the problem of finding weather a given number is prime or not was just a whole problem or a huge part of a problem , but as the standards of competative programming increases it proposes a huge problem in the area of time complexity. I mean for example we want the sum of prime numbers upto 10000 suppose, then iterating from 1 to 10000 and checking each and every single number weather it is prime or not up to 10000, and even inside the prime we keep another For loop from 1 to some range so just imagine how much huge amount of calculations are being done (for best understanding try it out in paper) , so it poses a problem .Same as you , I googled it out and spent some time in it ,asked many teachers and friends and found these.
 
 1)Naive solution. 
 
@@ -138,3 +138,24 @@ No its just easy to write and remember the code not the optimum once.
 
 You can futher optmize it by Reducing the number of iterating steps in the for loop.
 Actually u just need to check the divisiblity of all primes below sqrt(n) + 1 , not all the number below it.
+
+Example :-
+Is 629 a prime number ?<br>
+629 = 6 x 105 - 1<br>
+It COULD be prime number.<br>
+√629 ≈ 25
+Try dividing 629 by 2,3,5,7,11,13,17,19 & 23
+629 is divisible by 17.
+Hence 629 is NOT prime.
+
+This could be achived by Sieve of Eratosthenes(SOE) method .
+
+Is it all we can optmize the solution , no not at all we can also futher optmize it ,
+by taking the initial number of for loop as 3 (instead of 2) and increment to value by 2 , as it
+will remove all the even no. value .
+i.e, 3, 5 , 7, 9, ... will be returning from for loop
+This was just a small tip or trick
+
+Being a programmer i am really lazy and leaving the most optimum code on your hands , if in case you wrote the logic for that the Optimum code i.e, by appling SOE and all that stuff do give it as a Pull Request i will be merging it with this.
+
+<h1>Happy Coding</h1>
